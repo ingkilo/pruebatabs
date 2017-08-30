@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="menu" >
+    <ion-title >Pendientes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div >
+    <input type="text" placeholder="Buscar" ng-model="search.name" />
+  </div>
+  <ion-list >
+    <ion-item *ngFor="let xx of datos" detail-push (click)="openModal(xx.ID_PED)">
+      <div >Usuario: {{xx.MESA}}</div>
+      <div >Fecha: {{xx.FCH_CRE_PED}}</div>
+      <div >Dirección: {{xx.DIRECCION_PED}}</div>
+      <div >Valor: ${{xx.VALOR_PED}}</div>
+    </ion-item>    
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,55 @@
+<!--
+  Generated template for the ModalOnePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-item color="menu">    
+          <ion-row>
+            <ion-col >
+              Nombre
+            </ion-col>
+            <ion-col >
+              Cantidad
+            </ion-col>
+            <ion-col>
+              Total
+            </ion-col>
+          </ion-row>
+        </ion-item>
+    <ion-item *ngFor="let xx of datos" >
+        <ion-row>
+            <ion-col >
+                {{xx?.NOMBRE}}
+            </ion-col>
+            <ion-col >
+                {{xx?.CANTIDAD}}
+            </ion-col>
+            <ion-col>
+                {{xx?.TOTAL}}
+            </ion-col>
+          </ion-row>  
+    </ion-item>  
+  </ion-list>
+  <div >
+    Tiempo Estimado:
+      <input type="text" />
+    </div>
+ 
+  <button ion-button (click)="confirmar()" color="secondary">
+      <ion-icon name="checkmark" style="font-size: 20px;margin: 0 5px;"></ion-icon>
+      Confirmar
+  </button>
+  <button ion-button  color="danger">
+      <ion-icon name="trash" style="margin: 0 5px;"></ion-icon>
+      Eliminar
+  </button>
+  <button ion-button block (click)="closeModal()" color="menu">
+      <ion-icon name="close" style="font-size: 20px;margin: 0 5px;"></ion-icon>
+    Cerrar</button>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header >
+  <ion-navbar color="menu">
+    <ion-title >
+      Completados
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list inset>
+    <ion-item *ngFor="let xx of datos" detail-push (click)="openModal(xx.ID_PED)" >
+      <div item-center>{{xx.MESA}}</div>
+      <div item-right>{{xx.FCH_CRE_PED}}</div>
+    </ion-item>    
+  </ion-list>
+
+  <button ion-button (click)="reset()" color="menu">reset</button>
+</ion-content>

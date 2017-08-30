@@ -1,0 +1,16 @@
+<!--
+  Generated template for the ModalTwoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding>
+    <ion-list>
+      <ion-item *ngFor="let xx of datos" >
+          <div item-left>{{xx?.NOMBRE}}</div>
+          <div item-center> {{xx?.CANTIDAD}}</div>
+          <div item-right>{{xx?.TOTAL}}</div>
+      </ion-item>  
+    </ion-list>
+  <button ion-button block (click)="closeModal()">Cerra Modal2</button>
+</ion-content>

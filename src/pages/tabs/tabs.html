@@ -1,0 +1,5 @@
+<ion-tabs color="menu">
+  <ion-tab [root]="tab1Root" tabTitle="Pendientes" tabIcon="notifications" tabBadge="{{datos?.CONFIRMAR>0 ? datos?.CONFIRMAR : null}}" tabBadgeStyle="light"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Completados" tabIcon="md-restaurant" tabBadge="{{datos?.COMPLETAR>0 ? datos?.COMPLETAR : null}}" tabBadgeStyle="light"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+</ion-tabs>
